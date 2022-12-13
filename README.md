@@ -73,6 +73,7 @@ Github の [issue](https://github.com/shivase/obsidian-textlint-plugin/issues) �
 - エラーを無視できるようにする
 - textlint の設定を json 形式で上書きさせるのではなく、それぞれ個別に ON/OFF できるようにする
 - 無理矢理 react 部分をどうにかする
+- tooltip の位置が右端にでた時に隠れるのを修正する
 
 ## How to Plugin Development
 
