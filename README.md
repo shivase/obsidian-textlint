@@ -1,96 +1,81 @@
-# Obsidian Sample Plugin
+# Obsidian Textlint Plugin
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+[English README is Here](https://github.com/shivase/obsidian-textlint-plugin/blob/master/docs/README_EN.mdREADME.md)
 
-This project uses Typescript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in Typescript Definition format, which contains TSDoc comments describing what it does.
+Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグインです。
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
+導入することで、日本語の文章校正を行ってくれます。
+(textlint 自体は日本語だけではなく自然言語一般を対象としていますが、現時点では日本語向けの textlint プラグインしか入れていません)
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Changes the default font color to red using `styles.css`.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+![sample image](docs/images/sample_image.png)
 
-## First time developing plugins?
+## 　インストール方法
 
-Quick starting guide for new plugin devs:
+現時点ではコミュニティプラグインとして登録されていないため、マニュアルでの導入になります。
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+### マニュアルインストール
 
-## Releasing new releases
+1. [latest release](https://github.com/shivase/obsidian-textlint-plugin/releases/latest) より最新版の zip をダウンロード
+1. `main.js`, `styles.css`, `manifest.json` を `VaultFolder/.obsidian/plugins/obsidian-textlint/` 配下にコピー (VaultFolder は各自の Valut ディレクトリを指定)
+1. Obsidian をリロード
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
+## 使い方
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
+`COMMAND + P`を押してコマンド入力画面を呼び出し、`textlint`を入力して実行して下さい。
 
-## Adding your plugin to the community plugin list
+## 有効化されている textlint のプラグイン
 
-- Check https://github.com/obsidianmd/obsidian-releases/blob/master/plugin-review.md
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
+このプラグインで動作する、textlint のデフォルトプラグインは以下の通りです。
+@shivase の使っているものを入れているので、あまり万人向けとして精査していません。。
 
-## How to use
+- [@textlint-ja/no-synonyms](https://github.com/textlint-ja/textlint-rule-no-synonyms)
+- [@textlint-ja/textlint-rule-no-dropping-i](https://github.com/textlint-ja/textlint-rule-no-dropping-i)
+- [@textlint-ja/textlint-rule-no-insert-dropping-sa](https://github.com/textlint-ja/textlint-rule-no-insert-dropping-sa)
+- [abbr-within-parentheses](https://github.com/azu/textlint-rule-abbr-within-parentheses)
+- [footnote-order](https://github.com/textlint-rule/textlint-rule-footnote-order)
+- [ja-hiragana-keishikimeishi](https://github.com/lostandfound/textlint-rule-ja-hiragana-keishikimeishi)
+- [no-mixed-zenkaku-and-hankaku-alphabet](https://github.com/textlint-ja/textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet)
+- [period-in-list-item](https://github.com/textlint-rule/textlint-rule-period-in-list-item)
+- [prefer-tari-tari](https://github.com/textlint-ja/textlint-rule-prefer-tari-tari)
+- [preset-ja-spacing](https://github.com/textlint-ja/textlint-rule-preset-ja-spacing)
+- [preset-ja-technical-writing](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing)
+- [preset-jtf-style](https://github.com/textlint-ja/textlint-rule-preset-JTF-style)
+- [textlint-rule-date-weekday-mismatch](https://github.com/textlint-rule/textlint-rule-date-weekday-mismatch)
+- [textlint-rule-ja-no-inappropriate-words](https://github.com/textlint-ja/textlint-rule-ja-no-inappropriate-words)
+- [textlint-rule-ja-no-orthographic-variants](https://github.com/textlint-ja/textlint-rule-ja-no-orthographic-variants)
+- [textlint-rule-use-si-units](https://github.com/kn1cht/textlint-rule-use-si-units)
+- [textlint-rule-write-good](https://github.com/textlint-rule/textlint-rule-write-good)
 
-- Clone this repo.
-- `npm i` or `yarn` to install dependencies
-- `npm run dev` to start compilation in watch mode.
+**後述する本プラグインの設定画面より、各プラグインの有効化・無効化、及び詳細の設定を追加できるようになっています。**
 
-## Manually installing the plugin
+## 設定
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
+現時点の設定できる項目は以下の通り
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+- Lint on save  
+  ON にすることで、ファイルの保存時に自動的に Textlint が実行されます
+- Folder to ignore  
+  自動実行の対象外となるフォルダを設定できます。箇条書きで対象フォルダを記載して下さい
+- Override textlintrc  
+  textlint の設定を上書きたい場合に**textlintrc.json**形式で記載して下さい。デフォルト設定とマージ処理されるため、記載の無い項目はデフォルト値が優先されます。  
+  実際に設定しているデフォルト値はこちら -> [textlintrc.json](https://github.com/shivase/obsidian-textlint-plugin/blob/master/scripts/textlintrc.json)
 
-## Funding URL
+## 要望やバグ報告
 
-You can include funding URLs where people who use your plugin can financially support it.
+Github の [issue](https://github.com/shivase/obsidian-textlint-plugin/issues) に気軽にコメントを残して下さい。
 
-The simple way is to set the `fundingUrl` field to your link in your `manifest.json` file:
+※ textlint のプラグインは、web 対応していないものもあり、すべてが導入できるわけではないため、要望を叶えられない可能性があります。
 
-```json
-{
-    "fundingUrl": "https://buymeacoffee.com"
-}
-```
+## TODO
 
-If you have multiple URLs, you can also do:
+- とにかくテスト書く
+- textlint が推奨する値に変更するボタンを追加する
+- textlint の設定を json 形式で上書きさせるのではなく、それぞれ個別に ON/OFF できるようにする
+- 無理矢理 react 部分をどうにかする
 
-```json
-{
-    "fundingUrl": {
-        "Buy Me a Coffee": "https://buymeacoffee.com",
-        "GitHub Sponsor": "https://github.com/sponsors",
-        "Patreon": "https://www.patreon.com/"
-    }
-}
-```
+## Build plugin
 
-## API Documentation
-
-See https://github.com/obsidianmd/obsidian-api
+1. Clone this repo.
+1. `yarn` to install dependencies
+1. `yarn build:dev` to build main program
+1. `yarn generate-worker:dev` to build textlint worker.
