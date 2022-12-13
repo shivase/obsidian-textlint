@@ -1,27 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
+  prefix: 'tailwind-',
+  corePlugins: {
+    preflight: false,
   },
   content: ['./src/**/*.{ts,tsx}'],
-  theme: {
-    extend: {},
-    keyframes: {},
-    animation: {},
-  },
-  variants: {
-    extend: {},
-  },
+  theme: {},
   plugins: [require('daisyui')],
   purge: false,
   daisyui: {
+    prefix: 'daisy-',
     styled: true,
-    themes: true,
+    themes: false,
     base: true,
     utils: true,
     logs: true,
     rtl: false,
-    prefix: '',
   },
 };
