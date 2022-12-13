@@ -70,6 +70,7 @@ Github の [issue](https://github.com/shivase/obsidian-textlint-plugin/issues) �
 
 - とにかくテスト書く
 - textlint が推奨する値に変更するボタンを追加する
+- エラーを無視できるようにする
 - textlint の設定を json 形式で上書きさせるのではなく、それぞれ個別に ON/OFF できるようにする
 - 無理矢理 react 部分をどうにかする
 
