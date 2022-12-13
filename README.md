@@ -1,11 +1,11 @@
 # Obsidian Textlint Plugin
 
-[English README is Here](https://github.com/shivase/obsidian-textlint-plugin/blob/master/docs/README_EN.mdREADME.md)
+[README in English is Here](https://github.com/shivase/obsidian-textlint-plugin/blob/master/docs/README_EN.md)
 
 Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグインです。
 
 導入することで、日本語の文章校正を行ってくれます。
-(textlint 自体は日本語だけではなく自然言語一般を対象としていますが、現時点では日本語向けの textlint プラグインしか入れていません)
+(textlint 自体は日本語だけではなく自然言語一般を対象としていますが、現時点では日本語向けの textlint プラグインがメインです)
 
 ![sample image](docs/images/sample_image.png)
 
