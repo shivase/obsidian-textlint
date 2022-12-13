@@ -1,11 +1,11 @@
 # Obsidian Textlint Plugin
 
-[English README is Here](https://github.com/shivase/obsidian-textlint-plugin/blob/master/docs/README_EN.mdREADME.md)
+[README in English is Here](https://github.com/shivase/obsidian-textlint-plugin/blob/master/docs/README_EN.md)
 
 Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグインです。
 
 導入することで、日本語の文章校正を行ってくれます。
-(textlint 自体は日本語だけではなく自然言語一般を対象としていますが、現時点では日本語向けの textlint プラグインしか入れていません)
+(textlint 自体は日本語だけではなく自然言語一般を対象としていますが、現時点では日本語向けの textlint プラグインがメインです)
 
 ![sample image](docs/images/sample_image.png)
 
@@ -70,12 +70,17 @@ Github の [issue](https://github.com/shivase/obsidian-textlint-plugin/issues) �
 
 - とにかくテスト書く
 - textlint が推奨する値に変更するボタンを追加する
+- エラーを無視できるようにする
 - textlint の設定を json 形式で上書きさせるのではなく、それぞれ個別に ON/OFF できるようにする
 - 無理矢理 react 部分をどうにかする
 
-## Build plugin
+## How to Plugin Development
 
+1. cd `VaultFolder/.obsidian/plugins/`
 1. Clone this repo.
 1. `yarn` to install dependencies
 1. `yarn build:dev` to build main program
-1. `yarn generate-worker:dev` to build textlint worker.
+1. `yarn generate-worker:dev` to build textlint worker.  
+   command this after installing textlint plugins or updating scripts/textlintrc.json.
+
+use [pjeby/hot-reload: Automatically reload Obsidian plugins in development when their files are changed](https://github.com/pjeby/hot-reload) is recommended to develop plugins
