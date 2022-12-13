@@ -1,0 +1,21 @@
+{
+  "rules": {
+    "@textlint-ja/no-synonyms": true,
+    "@textlint-ja/textlint-rule-no-dropping-i": true,
+    "@textlint-ja/textlint-rule-no-insert-dropping-sa": true,
+    "abbr-within-parentheses": true,
+    "footnote-order": true,
+    "ja-hiragana-keishikimeishi": true,
+    "no-mixed-zenkaku-and-hankaku-alphabet": true,
+    "period-in-list-item": true,
+    "prefer-tari-tari": true,
+    "preset-ja-spacing": true,
+    "preset-ja-technical-writing": true,
+    "preset-jtf-style": true,
+    "textlint-rule-date-weekday-mismatch": true,
+    "textlint-rule-ja-no-inappropriate-words": true,
+    "textlint-rule-ja-no-orthographic-variants": true,
+    "textlint-rule-use-si-units": true,
+    "textlint-rule-write-good": true
+  }
+}
