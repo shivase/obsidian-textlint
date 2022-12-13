@@ -75,7 +75,7 @@ Github の [issue](https://github.com/shivase/obsidian-textlint/issues) に気�
 - 無理矢理 react 部分をどうにかする
 - tooltip の位置が右端にでた時に隠れるのを修正する
 
-## How to Plugin Development
+## Plugin Development
 
 1. cd `VaultFolder/.obsidian/plugins/`
 1. Clone this repo.

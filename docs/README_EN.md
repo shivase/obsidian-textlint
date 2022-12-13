@@ -1,17 +1,17 @@
-# Obsidian Textlint Plugin
+# Obsidian Textlint
 
 This is a [textlint](https://github.com/textlint/textlint) plugin for Obsidian.
 
 By installing this plugin, you can proofread Japanese text.
 (textlint itself targets not only Japanese but also natural languages in general, but at the moment it is mainly a textlint plugin for Japanese.)
 
-[sample image](./images/sample_image.png)
+![sample image](./images/sample_image.png)
 
 ## How to install
 
 At this time, it is not registered as a community plugin, so it must be installed manually.
 
-## Manually installing the plugin
+## Manual installation
 
 1. Download the [latest release](https://github.com/shivase/obsidian-textlint/releases/latest)
 1. Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/obsidian-textlint/`.
@@ -23,7 +23,7 @@ Press `COMMAND + P` to call up the command input screen, enter `textlint` and ru
 
 ## Activated textlint plugin
 
-Here are the default plugins for textlint that work with this plugin.
+Here are the default textlint plugins that work with this plugin.
 
 - [@textlint-ja/no-synonyms](https://github.com/textlint-ja/textlint-rule-no-synonyms)
 - [@textlint-ja/textlint-rule-no-dropping-i](https://github.com/textlint-ja/textlint-rule-no-dropping-i)
@@ -52,8 +52,8 @@ Currently, the following settings are available
 - Folder to ignore  
   You can set exclude folders
 - Override textlintrc  
-  If you want to override the textlint settings, please describe in **textlintrc.json** format. The default values are merged with the default settings.
-  The default values are here -> [textlintrc.json](https://github.com/shivase/obsidian-textlint/blob/master/scripts/textlintrc.json)
+  If you want to override the textlint settings, please describe in **textlintrc.json** format. The values are merged with the default settings.
+  The default are here -> [textlintrc.json](https://github.com/shivase/obsidian-textlint/blob/master/scripts/textlintrc.json)
 
 ## Requests and bug reports
 
@@ -61,7 +61,7 @@ Please feel free to comment at [issue](https://github.com/shivase/obsidian-textl
 
 Some textlint plugins are not web-supported, so we may not be able to fulfill your request.
 
-## How to Plugin Development
+## Plugin Development
 
 1. cd `VaultFolder/.obsidian/plugins/`
 1. Clone this repo.
