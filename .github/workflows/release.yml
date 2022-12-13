@@ -35,6 +35,3 @@ jobs:
           prerelease: false
           files: |
             ${{ github.event.repository.name }}.zip
-            main.js
-            manifest.json
-            styles.css
