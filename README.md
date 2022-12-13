@@ -1,6 +1,6 @@
-# Obsidian Textlint Plugin
+# Obsidian Textlint
 
-[README in English is Here](https://github.com/shivase/obsidian-textlint-plugin/blob/master/docs/README_EN.md)
+[README in English is Here](https://github.com/shivase/obsidian-textlint/blob/master/docs/README_EN.md)
 
 Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグインです。
 
@@ -15,8 +15,8 @@ Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグイン�
 
 ### マニュアルインストール
 
-1. [latest release](https://github.com/shivase/obsidian-textlint-plugin/releases/latest) より最新版の zip をダウンロード
-1. `main.js`, `styles.css`, `manifest.json` を `VaultFolder/.obsidian/plugins/obsidian-textlint/` 配下にコピー (VaultFolder は各自の Valut ディレクトリを指定)
+1. [latest release](https://github.com/shivase/obsidian-textlint/releases/latest) より最新版の zip をダウンロード
+1. `main.js`, `styles.css`, `manifest.json` を `VaultFolder/.obsidian/plugins/obsidian-textlint/` 配下にコピー (VaultFolder は各自の Vault ディレクトリを指定)
 1. Obsidian をリロード
 
 ## 使い方
@@ -55,14 +55,14 @@ Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグイン�
 - Lint on save  
   ON にすることで、ファイルの保存時に自動的に Textlint が実行されます
 - Folder to ignore  
-  自動実行の対象外となるフォルダを設定できます。箇条書きで対象フォルダを記載して下さい
+  対象外となるフォルダを設定できます。箇条書きで対象フォルダを記載して下さい
 - Override textlintrc  
   textlint の設定を上書きたい場合に**textlintrc.json**形式で記載して下さい。デフォルト設定とマージ処理されるため、記載の無い項目はデフォルト値が優先されます。  
-  実際に設定しているデフォルト値はこちら -> [textlintrc.json](https://github.com/shivase/obsidian-textlint-plugin/blob/master/scripts/textlintrc.json)
+  実際に設定しているデフォルト値はこちら -> [textlintrc.json](https://github.com/shivase/obsidian-textlint/blob/master/scripts/textlintrc.json)
 
 ## 要望やバグ報告
 
-Github の [issue](https://github.com/shivase/obsidian-textlint-plugin/issues) に気軽にコメントを残して下さい。
+Github の [issue](https://github.com/shivase/obsidian-textlint/issues) に気軽にコメントを残して下さい。
 
 ※ textlint のプラグインは、web 対応していないものもあり、すべてが導入できるわけではないため、要望を叶えられない可能性があります。
 

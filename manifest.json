@@ -3,7 +3,7 @@
   "name": "Textlint",
   "version": "0.0.1",
   "minAppVersion": "0.15.0",
-  "description": "Linting your notes by textlint(https://github.com/textlint/textlint)",
+  "description": "Proofread your notes by textlint(https://github.com/textlint/textlint)",
   "author": "shivase",
   "authorUrl": "https://github.com/shivase",
   "isDesktopOnly": true
