@@ -74,9 +74,13 @@ Github の [issue](https://github.com/shivase/obsidian-textlint-plugin/issues) �
 - textlint の設定を json 形式で上書きさせるのではなく、それぞれ個別に ON/OFF できるようにする
 - 無理矢理 react 部分をどうにかする
 
-## Build plugin
+## How to Plugin Development
 
+1. cd `VaultFolder/.obsidian/plugins/`
 1. Clone this repo.
 1. `yarn` to install dependencies
 1. `yarn build:dev` to build main program
-1. `yarn generate-worker:dev` to build textlint worker.
+1. `yarn generate-worker:dev` to build textlint worker.  
+   command this after installing textlint plugins or updating scripts/textlintrc.json.
+
+use [pjeby/hot-reload: Automatically reload Obsidian plugins in development when their files are changed](https://github.com/pjeby/hot-reload) is recommended to develop plugins
