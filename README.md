@@ -1,5 +1,8 @@
 # Obsidian Textlint
 
+[![download](https://img.shields.io/github/downloads/shivase/obsidian-textlint/total)](https://github.com/shivase/obsidian-textlint/releases)
+
+
 [README in English is Here](https://github.com/shivase/obsidian-textlint/blob/master/docs/README_EN.md)
 
 Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグインです。
