@@ -12,13 +12,14 @@
   "scripts": {
     "prepare": "husky install",
     "postinstall": "typesync",
-    "generate-css": "postcss src/styles.css -o styles.css",
+    "generate-css:dev": "NODE_ENV=development postcss src/styles.css -o styles.css",
+    "generate-css:prod": "NODE_ENV=production postcss src/styles.css -o styles.css",
     "generate-worker:dev": "MODE=development ./scripts/generate-worker.sh",
     "generate-worker:prod": "./scripts/generate-worker.sh",
-    "build:dev": "NODE_ENV=development yarn generate-css && webpack && cp ./dist/main.js* .",
-    "build:prod": "NODE_ENV=production yarn generate-css && webpack && cp ./dist/main.js* .",
+    "build:dev": "pnpm generate-css:dev && webpack && cp ./dist/main.js* .",
+    "build:prod": "pnpm generate-css:prod && webpack && cp ./dist/main.js* .",
     "version": "node version-bump.mjs && git add manifest.json versions.json",
-    "lint": "npm-run-all --parallel lint:*",
+    "lint": "run-p lint:*",
     "lint:eslint": "eslint --fix 'src/**/*.{js,ts,json,html}'",
     "lint:prettier": "prettier --no-error-on-unmatched-pattern --write src/**/*.{json,js,ts,md,html}"
   },
