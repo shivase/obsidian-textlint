@@ -14,14 +14,19 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: yarn
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
       - name: Build
         id: build
         env:
           SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
         run: |
-          yarn
-          yarn build:prod
+          pnpm install --frozen-lockfile
+          pnpm build:prod
       - name: Package
         run: |
           mkdir ${{ github.event.repository.name }}
