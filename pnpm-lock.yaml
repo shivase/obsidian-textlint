@@ -6,6 +6,7 @@ specifiers:
   '@codemirror/view': ^6.7.0
   '@commitlint/cli': ^17.3.0
   '@commitlint/config-conventional': ^17.3.0
+  '@commitlint/cz-commitlint': ^17.3.0
   '@sentry/browser': ^7.24.2
   '@sentry/tracing': ^7.24.2
   '@sentry/webpack-plugin': ^1.20.0
@@ -93,6 +94,7 @@ dependencies:
 devDependencies:
   '@commitlint/cli': 17.3.0
   '@commitlint/config-conventional': 17.3.0
+  '@commitlint/cz-commitlint': 17.3.0_commitizen@4.2.6
   '@sentry/browser': 7.28.1
   '@sentry/tracing': 7.28.1
   '@sentry/webpack-plugin': 1.20.0
@@ -444,6 +446,25 @@ packages:
     dependencies:
       '@commitlint/types': 17.0.0
       ajv: 8.11.2
+    dev: true
+
+  /@commitlint/cz-commitlint/17.3.0_commitizen@4.2.6:
+    resolution: {integrity: sha512-kaHa6vzEriGQZgnBj08TTc92m8KUAd0LbXhzUbfuoJzH5b9TnfsQI7Him7oXWe4PzXBVEMREcAdqIQHzRUilfQ==}
+    engines: {node: '>=v14'}
+    peerDependencies:
+      commitizen: ^4.0.3
+      inquirer: ^8.0.0
+    dependencies:
+      '@commitlint/ensure': 17.3.0
+      '@commitlint/load': 17.3.0
+      '@commitlint/types': 17.0.0
+      chalk: 4.1.2
+      commitizen: 4.2.6
+      lodash.isplainobject: 4.0.6
+      word-wrap: 1.2.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
     dev: true
 
   /@commitlint/ensure/17.3.0:
