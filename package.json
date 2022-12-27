@@ -16,12 +16,13 @@
     "generate-css:prod": "NODE_ENV=production postcss src/styles.css -o styles.css",
     "generate-worker:dev": "MODE=development ./scripts/generate-worker.sh",
     "generate-worker:prod": "./scripts/generate-worker.sh",
+    "lint": "run-p lint:*",
+    "lint:eslint": "eslint --fix 'src/**/*.{js,ts,json,html}'",
+    "lint:prettier": "prettier --no-error-on-unmatched-pattern --write src/**/*.{json,js,ts,md,html}",
     "build:dev": "pnpm generate-css:dev && webpack && cp ./dist/main.js* .",
     "build:prod": "pnpm generate-css:prod && webpack && cp ./dist/main.js* .",
     "version": "node version-bump.mjs && git add manifest.json versions.json",
-    "lint": "run-p lint:*",
-    "lint:eslint": "eslint --fix 'src/**/*.{js,ts,json,html}'",
-    "lint:prettier": "prettier --no-error-on-unmatched-pattern --write src/**/*.{json,js,ts,md,html}"
+    "changelog": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s"
   },
   "dependencies": {
     "@codemirror/language": "https://github.com/lishid/cm-language",
@@ -56,6 +57,7 @@
     "builtin-modules": "3.3.0",
     "clsx": "^1.2.1",
     "commitizen": "^4.2.5",
+    "conventional-changelog-cli": "^2.2.2",
     "copy-webpack-plugin": "^11.0.0",
     "cssnano": "^5.1.14",
     "cz-customizable": "^7.0.0",
