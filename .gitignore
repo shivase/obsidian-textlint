@@ -18,6 +18,4 @@ data.json
 # env
 .env
 
-yarn.lock
-
 .DS_Store
