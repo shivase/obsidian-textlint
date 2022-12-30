@@ -37,7 +37,7 @@ export const TooltipView: FC<TooltipViewProps> = (props) => {
         'tailwind-daisy-card tailwind-daisy-card-compact tailwind-absolute tailwind-w-[500px] tailwind-p-1 tailwind-text-left tailwind-shadow-xl',
       )}>
       <div className="tailwind-daisy-card-body">
-        <div className="tailwind-daisy-card-title tailwind-text-xs">
+        <div className="tailwind-daisy-card-title tailwind-text-xs tailwind-text-white">
           <div
             className={clsx(
               severity === 0 && 'tailwind-daisy-badge-info',
@@ -49,7 +49,9 @@ export const TooltipView: FC<TooltipViewProps> = (props) => {
           </div>
           {type}:{ruleId}
         </div>
-        <p className="tailwind-m-2 tailwind-text-sm">{message}</p>
+        <p className="tailwind-m-2 tailwind-text-sm tailwind-text-white">
+          {message}
+        </p>
       </div>
     </div>
   );
