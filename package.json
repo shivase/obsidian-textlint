@@ -1,6 +1,6 @@
 {
   "name": "obsidian-textlint",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "src/index.ts",
   "description": "Proofread your notes by textlint(https://github.com/textlint/textlint)",
   "homepage": "https://github.com/shivase/obsidian-textlint",
