@@ -16,8 +16,8 @@
     "generate-worker:dev": "MODE=development ./scripts/generate-worker.sh",
     "generate-worker:prod": "./scripts/generate-worker.sh",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint --fix 'src/**/*.{js,ts,json,html}'",
-    "lint:prettier": "prettier --no-error-on-unmatched-pattern --write src/**/*.{json,js,ts,md,html}",
+    "lint:eslint": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json,html}'",
+    "lint:prettier": "prettier --no-error-on-unmatched-pattern --write src/**/*.{json,js,jsx,ts,tsx,html}",
     "build:dev": "pnpm generate-css:dev && webpack && cp ./dist/main.js* .",
     "build:prod": "pnpm generate-css:prod && webpack && cp ./dist/main.js* .",
     "version": "node version-bump.mjs && git add manifest.json versions.json",
@@ -115,7 +115,7 @@
     "worker-loader": "^3.0.8"
   },
   "lint-staged": {
-    "src/**/*.{ts,js,json,html}": [
+    "src/**/*.{ts,tsx,js,jsx,json,html}": [
       "prettier --write --loglevel=error",
       "eslint --fix"
     ]
