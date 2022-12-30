@@ -1,0 +1,51 @@
+name: Release Obsidian Plugin
+on:
+  push:
+    tags:
+      - '*'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set node version
+        run: echo "NODE_VERSION=$(cat .node-version)" >> $GITHUB_ENV
+      - name: Set pnpm version
+        shell: bash
+        run: |
+          pnpm=$(cat package.json | jq -r .packageManager | cut -f 2 -d "@")
+          echo "PNPM_VERSION=${pnpm}" >> $GITHUB_ENV
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: ${{ env.PNPM_VERSION }}
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        id: build
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+        run: pnpm build:prod
+      - name: Package
+        run: |
+          mkdir ${{ github.event.repository.name }}
+          cp main.js manifest.json styles.css README.md ${{ github.event.repository.name }}
+          zip -r ${{ github.event.repository.name }}.zip ${{ github.event.repository.name }}
+      # Create the release on github
+      - name: Release
+        uses: 'marvinpinto/action-automatic-releases@latest'
+        with:
+          repo_token: '${{ secrets.GITHUB_TOKEN }}'
+          prerelease: false
+          files: |
+            ${{ github.event.repository.name }}.zip
+            main.js
+            manifest.json
+            styles.css

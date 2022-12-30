@@ -1,0 +1,10 @@
+arrowParens: always
+bracketSameLine: true
+bracketSpacing: true
+endOfLine: auto
+htmlWhitespaceSensitivity: ignore
+printWidth: 80
+singleQuote: true
+tabWidth: 2
+trailingComma: all
+useTabs: false
