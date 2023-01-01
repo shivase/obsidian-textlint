@@ -11,7 +11,7 @@ Obsidian 用の[textlint](https://github.com/textlint/textlint)プラグイン�
 
 ![sample image](docs/images/sample_image.png)
 
-## 　インストール方法
+## インストール方法
 
 現時点ではコミュニティプラグインとして登録されていないため、マニュアルでの導入になります。
 
