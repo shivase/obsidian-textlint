@@ -1,0 +1,32 @@
+name: Pull Request
+body:
+  - type: textarea
+    id: what-kind
+    attributes:
+      label: What kind of change does this PR introduce? (Bug fix, feature, docs update, ...)
+    validations:
+      required: true
+  - type: textarea
+    id: what-current-behavior
+    attributes:
+      label: What is the current behavior? (You can also link to an open issue here)
+    validations:
+      required: true
+  - type: textarea
+    id: what-new-behavior
+    attributes:
+      label: What is the new behavior (if this is a feature change)?
+    validations:
+      required: true
+  - type: textarea
+    id: breaking-change
+    attributes:
+      label: Does this PR introduce a breaking change? (What changes might users need to make in their application due to this PR?)
+    validations:
+      required: true
+  - type: textarea
+    id: other
+    attributes:
+      label: Other information
+    validations:
+      required: false
